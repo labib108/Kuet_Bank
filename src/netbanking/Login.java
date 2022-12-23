@@ -12,7 +12,6 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        kGradientPanel2 = new keeptoo.KGradientPanel();
         jLabel2 = new javax.swing.JLabel();
         loginPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
@@ -27,19 +26,6 @@ public class Login extends javax.swing.JFrame {
         closeBtn = new javax.swing.JButton();
         contactBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-
-        kGradientPanel2.setkEndColor(new java.awt.Color(0, 153, 255));
-
-        javax.swing.GroupLayout kGradientPanel2Layout = new javax.swing.GroupLayout(kGradientPanel2);
-        kGradientPanel2.setLayout(kGradientPanel2Layout);
-        kGradientPanel2Layout.setHorizontalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        kGradientPanel2Layout.setVerticalGroup(
-            kGradientPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
 
         jLabel2.setText("jLabel2");
 
@@ -90,7 +76,6 @@ public class Login extends javax.swing.JFrame {
         loginPanel.add(signInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 70, 30));
 
         clearBtn.setBackground(new java.awt.Color(204, 204, 204));
-        clearBtn.setForeground(new java.awt.Color(0, 0, 0));
         clearBtn.setText("Clear");
         clearBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -101,7 +86,6 @@ public class Login extends javax.swing.JFrame {
 
         signUpBtn.setBackground(new java.awt.Color(204, 204, 204));
         signUpBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 12)); // NOI18N
-        signUpBtn.setForeground(new java.awt.Color(0, 0, 0));
         signUpBtn.setText("SIGN UP");
         signUpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -120,7 +104,6 @@ public class Login extends javax.swing.JFrame {
 
         contactBtn.setBackground(new java.awt.Color(204, 204, 204));
         contactBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
-        contactBtn.setForeground(new java.awt.Color(0, 0, 0));
         contactBtn.setText("Contact With Us");
         contactBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -229,7 +212,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
-    private keeptoo.KGradientPanel kGradientPanel2;
     private javax.swing.JPanel loginPanel;
     private javax.swing.JPasswordField password;
     private java.awt.Button signInBtn;

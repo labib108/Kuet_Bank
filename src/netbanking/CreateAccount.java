@@ -54,6 +54,8 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel16 = new javax.swing.JLabel();
         terms1 = new javax.swing.JCheckBox();
         terms2 = new javax.swing.JCheckBox();
+        jLabel17 = new javax.swing.JLabel();
+        Balance = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -193,23 +195,25 @@ public class CreateAccount extends javax.swing.JFrame {
         terms2.setBackground(new java.awt.Color(255, 255, 204));
         terms2.setText("I have read the Terms and Condition and accept all Terms and Condition\n");
 
+        jLabel17.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+        jLabel17.setText("Balance :");
+
+        Balance.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
+
         javax.swing.GroupLayout createAccountPanelLayout = new javax.swing.GroupLayout(createAccountPanel);
         createAccountPanel.setLayout(createAccountPanelLayout);
         createAccountPanelLayout.setHorizontalGroup(
             createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, createAccountPanelLayout.createSequentialGroup()
-                .addContainerGap(157, Short.MAX_VALUE)
-                .addComponent(clearBtn)
-                .addGap(133, 133, 133)
-                .addComponent(Register)
-                .addGap(255, 255, 255))
             .addGroup(createAccountPanelLayout.createSequentialGroup()
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addGap(34, 34, 34)
                         .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(terms1)
                             .addComponent(terms2)
+                            .addGroup(createAccountPanelLayout.createSequentialGroup()
+                                .addComponent(jLabel13)
+                                .addGap(18, 18, 18)
+                                .addComponent(jLabel14))
                             .addGroup(createAccountPanelLayout.createSequentialGroup()
                                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                                     .addComponent(jLabel3)
@@ -222,24 +226,29 @@ public class CreateAccount extends javax.swing.JFrame {
                                     .addComponent(jLabel10)
                                     .addComponent(jLabel11)
                                     .addComponent(jLabel12)
-                                    .addComponent(jLabel13)
-                                    .addComponent(jLabel15))
-                                .addGap(18, 18, 18)
+                                    .addComponent(jLabel15)
+                                    .addComponent(jLabel17))
                                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                                    .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(fatherName, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(motherName, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
                                     .addGroup(createAccountPanelLayout.createSequentialGroup()
-                                        .addComponent(Male)
                                         .addGap(18, 18, 18)
-                                        .addComponent(Female))
-                                    .addComponent(AccountType, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Address, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Nationality, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(Email, javax.swing.GroupLayout.PREFERRED_SIZE, 305, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jLabel14)
-                                    .addComponent(jLabel16)))))
+                                        .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                            .addComponent(Name, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(fatherName, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(motherName, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(Date, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addGroup(createAccountPanelLayout.createSequentialGroup()
+                                                .addComponent(Male)
+                                                .addGap(18, 18, 18)
+                                                .addComponent(Female))
+                                            .addComponent(AccountType, 0, 305, Short.MAX_VALUE)
+                                            .addComponent(Address, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(Nationality, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(Email, javax.swing.GroupLayout.DEFAULT_SIZE, 305, Short.MAX_VALUE)
+                                            .addComponent(Balance)))
+                                    .addGroup(createAccountPanelLayout.createSequentialGroup()
+                                        .addGap(16, 16, 16)
+                                        .addComponent(jLabel16))))
+                            .addComponent(terms1)))
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addComponent(backBtn)
                         .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -255,8 +264,13 @@ public class CreateAccount extends javax.swing.JFrame {
                                 .addComponent(jLabel1))))
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addGap(210, 210, 210)
-                        .addComponent(jLabel2)))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+                        .addComponent(jLabel2))
+                    .addGroup(createAccountPanelLayout.createSequentialGroup()
+                        .addGap(153, 153, 153)
+                        .addComponent(clearBtn)
+                        .addGap(145, 145, 145)
+                        .addComponent(Register)))
+                .addContainerGap(194, Short.MAX_VALUE))
         );
         createAccountPanelLayout.setVerticalGroup(
             createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -316,21 +330,25 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addComponent(jLabel12))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel13)
-                    .addComponent(jLabel14))
+                    .addComponent(Balance, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel17))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel15)
-                    .addComponent(jLabel16))
-                .addGap(29, 29, 29)
+                    .addComponent(jLabel14)
+                    .addComponent(jLabel13))
+                .addGap(18, 18, 18)
+                .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addGap(18, 18, 18)
                 .addComponent(terms1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(terms2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(Register)
-                    .addComponent(clearBtn))
-                .addContainerGap(171, Short.MAX_VALUE))
+                    .addComponent(clearBtn)
+                    .addComponent(Register))
+                .addContainerGap(142, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -363,6 +381,7 @@ public class CreateAccount extends javax.swing.JFrame {
         Address.setText("");
         Nationality.setText("");
         Email.setText("");
+        Balance.setText("");
     }//GEN-LAST:event_clearBtnActionPerformed
 
     private void RegisterActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegisterActionPerformed
@@ -388,6 +407,7 @@ public class CreateAccount extends javax.swing.JFrame {
         String address = Address.getText();
         String nationality = Nationality.getText();
         String email = Email.getText();
+        String balance = Balance.getText();
         Random random = new Random();
         String cardnumber = null;
         String pin = null;
@@ -400,7 +420,7 @@ public class CreateAccount extends javax.swing.JFrame {
            
         try{
             connection c = new connection();
-            String query = "insert into signup values('"+username+"','"+fathername+"','"+mothername+"','"+dob+"','"+gender+"','"+maritalstatus+"','"+accounttype+"','"+address+"','"+nationality+"','"+email+"','"+cardnumber+"','"+pin+"') ";
+            String query = "insert into signup values('"+username+"','"+fathername+"','"+mothername+"','"+dob+"','"+gender+"','"+maritalstatus+"','"+accounttype+"','"+address+"','"+nationality+"','"+email+"','"+cardnumber+"','"+pin+"','"+balance+"') ";
             c.s.executeUpdate(query);
         }catch(Exception e) {
             System.out.println(e);
@@ -454,6 +474,7 @@ public class CreateAccount extends javax.swing.JFrame {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> AccountType;
     private javax.swing.JTextField Address;
+    private javax.swing.JTextField Balance;
     private com.toedter.calendar.JDateChooser Date;
     private javax.swing.JTextField Email;
     private javax.swing.JRadioButton Female;
@@ -478,6 +499,7 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;

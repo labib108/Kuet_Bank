@@ -137,19 +137,28 @@ public class Login extends javax.swing.JFrame {
         connection c = new connection();
         String cardnumber = CardNumber.getText();
         String pin = password.getText();
-        String query = "select * from signup where cardnumber = '"+cardnumber+"'and pin = '"+pin+"'";
-        try {
-            ResultSet rs = c.s.executeQuery(query);
-            if(rs.next()) {
+        if(cardnumber.equals("admin") && pin.equals("admin"))
+        {
+            setVisible(false);
+            dispose();
+            new Admin().setVisible(true);
+        }
+        else {
+            String query = "select * from signup where cardnumber = '"+cardnumber+"'and pin = '"+pin+"'";
+            try {
+                ResultSet rs = c.s.executeQuery(query);
+                if(rs.next()) {
                 setVisible(false);
                 dispose();
                 new Home().setVisible(true);
-            }else {
-                JOptionPane.showMessageDialog(null,"Incorrect CARD NUMBER or PIN"); 
-            }          
-        }catch(Exception e) {
-            System.out.println(e);
+                }else {
+                    JOptionPane.showMessageDialog(null,"Incorrect CARD NUMBER or PIN"); 
+                }          
+            }catch(Exception e) {
+                System.out.println(e);
+            }
         }
+        
     }//GEN-LAST:event_signInBtnActionPerformed
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed

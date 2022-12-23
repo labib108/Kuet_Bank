@@ -12,7 +12,6 @@ public class Login extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
-        jLabel2 = new javax.swing.JLabel();
         loginPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jLabel4 = new javax.swing.JLabel();
@@ -26,8 +25,6 @@ public class Login extends javax.swing.JFrame {
         closeBtn = new javax.swing.JButton();
         contactBtn = new javax.swing.JButton();
         jLabel3 = new javax.swing.JLabel();
-
-        jLabel2.setText("jLabel2");
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -66,7 +63,7 @@ public class Login extends javax.swing.JFrame {
         loginPanel.add(password, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 190, 260, 40));
 
         signInBtn.setBackground(new java.awt.Color(204, 204, 204));
-        signInBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 12)); // NOI18N
+        signInBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 14)); // NOI18N
         signInBtn.setLabel("SIGN IN");
         signInBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
@@ -76,17 +73,20 @@ public class Login extends javax.swing.JFrame {
         loginPanel.add(signInBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(460, 250, 70, 30));
 
         clearBtn.setBackground(new java.awt.Color(204, 204, 204));
+        clearBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         clearBtn.setText("Clear");
+        clearBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         clearBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 clearBtnActionPerformed(evt);
             }
         });
-        loginPanel.add(clearBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 60, -1));
+        loginPanel.add(clearBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(730, 200, 60, 30));
 
         signUpBtn.setBackground(new java.awt.Color(204, 204, 204));
         signUpBtn.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 12)); // NOI18N
         signUpBtn.setText("SIGN UP");
+        signUpBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         signUpBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 signUpBtnActionPerformed(evt);
@@ -105,6 +105,7 @@ public class Login extends javax.swing.JFrame {
         contactBtn.setBackground(new java.awt.Color(204, 204, 204));
         contactBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         contactBtn.setText("Contact With Us");
+        contactBtn.setBorder(javax.swing.BorderFactory.createEtchedBorder());
         contactBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 contactBtnActionPerformed(evt);
@@ -136,7 +137,7 @@ public class Login extends javax.swing.JFrame {
         connection c = new connection();
         String cardnumber = CardNumber.getText();
         String pin = password.getText();
-        String query = "select * from login where cardnumber = '"+cardnumber+"'and pin = '"+pin+"'";
+        String query = "select * from signup where cardnumber = '"+cardnumber+"'and pin = '"+pin+"'";
         try {
             ResultSet rs = c.s.executeQuery(query);
             if(rs.next()) {
@@ -159,7 +160,7 @@ public class Login extends javax.swing.JFrame {
     private void signUpBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signUpBtnActionPerformed
         setVisible(false);
         dispose();
-        new CreateAccount1().setVisible(true);
+        new CreateAccount().setVisible(true);
     }//GEN-LAST:event_signUpBtnActionPerformed
 
     private void closeBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_closeBtnActionPerformed
@@ -207,7 +208,6 @@ public class Login extends javax.swing.JFrame {
     private javax.swing.JButton closeBtn;
     private javax.swing.JButton contactBtn;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

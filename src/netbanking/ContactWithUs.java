@@ -88,7 +88,7 @@ public class ContactWithUs extends javax.swing.JFrame {
 
         jLabel8.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/mypic1-removebg-preview 4.png"))); // NOI18N
         jLabel8.setPreferredSize(new java.awt.Dimension(250, 250));
-        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 60, 170, 180));
+        getContentPane().add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 200, 170, 180));
 
         exitBtn.setBackground(new java.awt.Color(255, 0, 51));
         exitBtn.setForeground(new java.awt.Color(255, 255, 255));
@@ -100,7 +100,6 @@ public class ContactWithUs extends javax.swing.JFrame {
         });
         getContentPane().add(exitBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(770, 0, 30, 30));
 
-        goBackBtn.setBackground(new java.awt.Color(255, 255, 255));
         goBackBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/goback.png"))); // NOI18N
         goBackBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {

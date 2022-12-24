@@ -21,7 +21,6 @@ public class CreateAccount extends javax.swing.JFrame {
         MaritalStatus = new javax.swing.ButtonGroup();
         createAccountPanel = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
-        jLabel2 = new javax.swing.JLabel();
         fatherName = new javax.swing.JTextField();
         Name = new javax.swing.JTextField();
         Address = new javax.swing.JTextField();
@@ -65,10 +64,6 @@ public class CreateAccount extends javax.swing.JFrame {
         jLabel1.setBackground(new java.awt.Color(255, 255, 255));
         jLabel1.setFont(new java.awt.Font("Segoe UI", 1, 30)); // NOI18N
         jLabel1.setText("Application Form");
-
-        jLabel2.setBackground(new java.awt.Color(255, 255, 255));
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Page 1 : Personal Details");
 
         fatherName.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
@@ -263,9 +258,6 @@ public class CreateAccount extends javax.swing.JFrame {
                                 .addGap(157, 157, 157)
                                 .addComponent(jLabel1))))
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
-                        .addGap(210, 210, 210)
-                        .addComponent(jLabel2))
-                    .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addGap(153, 153, 153)
                         .addComponent(clearBtn)
                         .addGap(145, 145, 145)
@@ -280,9 +272,7 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1)))
-                .addGap(1, 1, 1)
-                .addComponent(jLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 37, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addGap(44, 44, 44)
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel4))
@@ -337,7 +327,7 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addComponent(jLabel14)
                     .addComponent(jLabel13))
                 .addGap(18, 18, 18)
-                .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(jLabel16, javax.swing.GroupLayout.PREFERRED_SIZE, 22, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel15))
                 .addGap(18, 18, 18)
@@ -500,7 +490,6 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel15;
     private javax.swing.JLabel jLabel16;
     private javax.swing.JLabel jLabel17;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;

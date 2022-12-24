@@ -56,7 +56,7 @@ public class welcome extends javax.swing.JFrame {
         welcomeLevel.setBackground(new java.awt.Color(255, 255, 255));
         welcomeLevel.setFont(new java.awt.Font("Microsoft Sans Serif", 1, 36)); // NOI18N
         welcomeLevel.setForeground(new java.awt.Color(0, 0, 204));
-        welcomeLevel.setText("Welcome To KUET BANK");
+        welcomeLevel.setText("Welcome To ABC BANK");
 
         javax.swing.GroupLayout welcomeBackgroundPanelLayout = new javax.swing.GroupLayout(welcomeBackgroundPanel);
         welcomeBackgroundPanel.setLayout(welcomeBackgroundPanelLayout);

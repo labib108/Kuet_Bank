@@ -35,7 +35,7 @@ public class Login extends javax.swing.JFrame {
 
         jLabel1.setFont(new java.awt.Font("Microsoft Sans Serif", 0, 36)); // NOI18N
         jLabel1.setForeground(new java.awt.Color(204, 204, 204));
-        jLabel1.setText("Welcome To KUET BANK");
+        jLabel1.setText("Welcome To ABC BANK");
         loginPanel.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 40, 420, -1));
 
         jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 24)); // NOI18N

@@ -94,13 +94,14 @@ public class Login extends javax.swing.JFrame {
         });
         loginPanel.add(signUpBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(640, 250, 80, 30));
 
+        closeBtn.setBackground(new java.awt.Color(255, 0, 0));
         closeBtn.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/close-btn.png"))); // NOI18N
         closeBtn.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 closeBtnActionPerformed(evt);
             }
         });
-        loginPanel.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(780, 0, 20, 20));
+        loginPanel.add(closeBtn, new org.netbeans.lib.awtextra.AbsoluteConstraints(760, 0, 40, 40));
 
         contactBtn.setBackground(new java.awt.Color(204, 204, 204));
         contactBtn.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N

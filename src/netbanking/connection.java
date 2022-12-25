@@ -25,9 +25,6 @@ public class connection {
         }catch(Exception e)
         {
             System.out.println(e);
-        }
-            
-    }
-    
-    
+        }            
+    }  
 }

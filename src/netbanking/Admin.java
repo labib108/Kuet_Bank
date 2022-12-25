@@ -8,6 +8,7 @@ public class Admin extends javax.swing.JFrame {
 
     public Admin() {
         initComponents();
+        //show();
     }
 
     @SuppressWarnings("unchecked")
@@ -34,9 +35,20 @@ public class Admin extends javax.swing.JFrame {
         employeetable = new rojerusan.RSTableMetro();
         jLabel6 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
+        serchField = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
         jButton2 = new javax.swing.JButton();
+        jButton3 = new javax.swing.JButton();
+        showname = new javax.swing.JLabel();
+        showcard = new javax.swing.JLabel();
+        showbalance = new javax.swing.JLabel();
+        namelebel = new javax.swing.JLabel();
+        typelevel = new javax.swing.JLabel();
+        emaillevel = new javax.swing.JLabel();
+        cardlevel = new javax.swing.JLabel();
+        balencelevel = new javax.swing.JLabel();
+        showemail = new javax.swing.JLabel();
+        showaccounttype = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 0, 0));
@@ -181,12 +193,14 @@ public class Admin extends javax.swing.JFrame {
                 .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
 
-        jPanel1.setBackground(new java.awt.Color(0, 150, 150));
+        jPanel1.setBackground(new java.awt.Color(0, 140, 140));
+        jPanel1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         jLabel2.setBackground(new java.awt.Color(255, 255, 255));
         jLabel2.setFont(new java.awt.Font("Segoe UI", 3, 24)); // NOI18N
-        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setForeground(new java.awt.Color(255, 255, 0));
         jLabel2.setText("Welcome To Admin Page");
+        jPanel1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(311, 18, -1, -1));
 
         usertable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
@@ -204,6 +218,8 @@ public class Admin extends javax.swing.JFrame {
         usertable.setColorFilasBackgound2(new java.awt.Color(255, 255, 204));
         jScrollPane1.setViewportView(usertable);
 
+        jPanel1.add(jScrollPane1, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 87, 417, 199));
+
         employeetable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null},
@@ -220,19 +236,25 @@ public class Admin extends javax.swing.JFrame {
         employeetable.setColorFilasBackgound2(new java.awt.Color(255, 255, 204));
         jScrollPane2.setViewportView(employeetable);
 
+        jPanel1.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 320, 417, 214));
+
         jLabel6.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         jLabel6.setForeground(new java.awt.Color(255, 255, 0));
         jLabel6.setText("Employee Data");
+        jPanel1.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 292, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Segoe UI", 3, 16)); // NOI18N
         jLabel7.setForeground(new java.awt.Color(255, 255, 0));
-        jLabel7.setText("User Data");
+        jLabel7.setText("Customer Data");
+        jPanel1.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(49, 59, -1, -1));
 
-        jTextField1.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        serchField.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jPanel1.add(serchField, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 90, 246, 36));
 
         jLabel9.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
         jLabel9.setForeground(new java.awt.Color(255, 255, 255));
         jLabel9.setText("Serach user data and transection history");
+        jPanel1.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 129, -1, -1));
 
         jButton2.setBackground(new java.awt.Color(255, 0, 0));
         jButton2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/close-btn.png"))); // NOI18N
@@ -244,58 +266,57 @@ public class Admin extends javax.swing.JFrame {
                 jButton2ActionPerformed(evt);
             }
         });
+        jPanel1.add(jButton2, new org.netbeans.lib.awtextra.AbsoluteConstraints(925, 0, -1, -1));
 
-        javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
-        jPanel1.setLayout(jPanel1Layout);
-        jPanel1Layout.setHorizontalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(311, 311, 311)
-                .addComponent(jLabel2)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jButton2))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(49, 49, 49)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jLabel6)
-                        .addGap(0, 0, Short.MAX_VALUE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(jLabel7)
-                            .addGroup(jPanel1Layout.createSequentialGroup()
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE)
-                                    .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 417, javax.swing.GroupLayout.PREFERRED_SIZE))
-                                .addGap(37, 37, 37)
-                                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                                    .addComponent(jLabel9, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                                    .addComponent(jTextField1))))
-                        .addContainerGap(209, Short.MAX_VALUE))))
-        );
-        jPanel1Layout.setVerticalGroup(
-            jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(18, 18, 18)
-                        .addComponent(jLabel2))
-                    .addComponent(jButton2))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 9, Short.MAX_VALUE)
-                .addComponent(jLabel7)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 199, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addComponent(jTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                        .addComponent(jLabel9)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jLabel6)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
-                .addComponent(jScrollPane2, javax.swing.GroupLayout.PREFERRED_SIZE, 214, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(14, 14, 14))
-        );
+        jButton3.setBackground(new java.awt.Color(0, 140, 140));
+        jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/candidate.png"))); // NOI18N
+        jButton3.setBorder(null);
+        jButton3.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton3ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(jButton3, new org.netbeans.lib.awtextra.AbsoluteConstraints(790, 90, -1, 60));
+
+        showname.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showname.setText("name");
+        jPanel1.add(showname, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 170, -1, -1));
+
+        showcard.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showcard.setText("card");
+        jPanel1.add(showcard, new org.netbeans.lib.awtextra.AbsoluteConstraints(680, 290, -1, -1));
+
+        showbalance.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showbalance.setText("balance");
+        jPanel1.add(showbalance, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 330, -1, -1));
+
+        namelebel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        namelebel.setText("Name :");
+        jPanel1.add(namelebel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 167, -1, -1));
+
+        typelevel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        typelevel.setText("Account Type :");
+        jPanel1.add(typelevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 210, -1, -1));
+
+        emaillevel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        emaillevel.setText("E-mail :");
+        jPanel1.add(emaillevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 253, -1, -1));
+
+        cardlevel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        cardlevel.setText("Card Number :");
+        jPanel1.add(cardlevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 290, -1, -1));
+
+        balencelevel.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        balencelevel.setText("Balance :");
+        jPanel1.add(balencelevel, new org.netbeans.lib.awtextra.AbsoluteConstraints(540, 330, -1, -1));
+
+        showemail.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showemail.setText("Email");
+        jPanel1.add(showemail, new org.netbeans.lib.awtextra.AbsoluteConstraints(660, 250, -1, -1));
+
+        showaccounttype.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showaccounttype.setText("Type");
+        jPanel1.add(showaccounttype, new org.netbeans.lib.awtextra.AbsoluteConstraints(670, 210, -1, -1));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -316,6 +337,13 @@ public class Admin extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+    public void show() {
+        namelebel.setVisible(false);
+        typelevel.setVisible(false);
+        emaillevel.setVisible(false);
+        cardlevel.setVisible(false);
+        balencelevel.setVisible(false);
+    }
     private void userDataActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userDataActionPerformed
         try {
             connection c = new connection();
@@ -353,7 +381,6 @@ public class Admin extends javax.swing.JFrame {
             connection c = new connection();
             String query = "select * from signuptwo ";
             ResultSet rs = c.s.executeQuery(query);
-
             employeetable.setShowGrid(true);
 
             DefaultTableModel model= (DefaultTableModel)employeetable.getModel();
@@ -377,6 +404,44 @@ public class Admin extends javax.swing.JFrame {
     private void jButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton2ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton2ActionPerformed
+
+    private void jButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton3ActionPerformed
+        try {
+            // TODO add your handling code here:
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kuet_bank","root","1234");
+            
+            String sql = "select username,accounttype,email,cardnumber,cardnumber from signup where username =?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1, serchField.getText());
+            ResultSet rs=pst.executeQuery();
+             
+      
+             if(rs.next()==true)
+             {
+                String s1=rs.getString("username");
+                String s2=rs.getString("accounttype");
+                String s3=rs.getString("email");
+                String s4=rs.getString("cardnumber");
+                String s5=rs.getString("cardnumber");
+                  
+                showname.setText(s1);
+                showaccounttype.setText(s2);
+                showemail.setText(s3);
+                showcard.setText(s4);
+                showbalance.setText(s5);
+                 
+                 JOptionPane.showMessageDialog(this,"Data Viewed!");
+             }
+                     
+        
+            
+            con.close();
+        } 
+        
+         catch (SQLException ex) {
+            java.util.logging.Logger.getLogger(Admin.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+        }
+    }//GEN-LAST:event_jButton3ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -415,10 +480,14 @@ public class Admin extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton AddEmployee;
+    private javax.swing.JLabel balencelevel;
+    private javax.swing.JLabel cardlevel;
+    private javax.swing.JLabel emaillevel;
     private javax.swing.JButton employeeData;
     private rojerusan.RSTableMetro employeetable;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -432,9 +501,16 @@ public class Admin extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JScrollPane jScrollPane2;
-    private javax.swing.JTextField jTextField1;
     private javax.swing.JButton logout;
+    private javax.swing.JLabel namelebel;
     private javax.swing.JButton search;
+    private javax.swing.JTextField serchField;
+    private javax.swing.JLabel showaccounttype;
+    private javax.swing.JLabel showbalance;
+    private javax.swing.JLabel showcard;
+    private javax.swing.JLabel showemail;
+    private javax.swing.JLabel showname;
+    private javax.swing.JLabel typelevel;
     private javax.swing.JButton userData;
     private rojerusan.RSTableMetro usertable;
     // End of variables declaration//GEN-END:variables

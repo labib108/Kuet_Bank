@@ -1,5 +1,6 @@
 package netbanking;
 
+import java.text.SimpleDateFormat;
 import java.util.Random;
 import javax.swing.JOptionPane;
 
@@ -378,7 +379,8 @@ public class CreateAccount extends javax.swing.JFrame {
         String username = Name.getText();
         String fathername = fatherName.getText();
         String mothername = motherName.getText();
-        String dob  = "" + Date.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dob = sdf.format(Date.getDate());
         String gender = null;
         if(Male.isSelected()){
             gender = "Male";

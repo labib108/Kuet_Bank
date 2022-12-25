@@ -1,5 +1,7 @@
 package netbanking;
 
+import java.text.SimpleDateFormat;
+
 public class CreateEmployeeAccount extends javax.swing.JFrame {
 
     public CreateEmployeeAccount() {
@@ -328,7 +330,8 @@ public class CreateEmployeeAccount extends javax.swing.JFrame {
         String name = Name.getText();
         String fathername = fatherName.getText();
         String mothername = motherName.getText();
-        String dob  = "" + Date.getDate();
+        SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd");
+        String dob = sdf.format(Date.getDate());
         String gender = null;
         if(Male.isSelected()){
             gender = "Male";

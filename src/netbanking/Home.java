@@ -1,16 +1,13 @@
 package netbanking;
 
+import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
 
 public class Home extends javax.swing.JFrame {
 
-    private String data;
-
     public Home() {
         initComponents();
-        data(data);
-        //showCard();
     }
 
     @SuppressWarnings("unchecked")
@@ -29,8 +26,14 @@ public class Home extends javax.swing.JFrame {
         jPanel1 = new javax.swing.JPanel();
         jLabel1 = new javax.swing.JLabel();
         jButton1 = new javax.swing.JButton();
-        jLabel2 = new javax.swing.JLabel();
-        showcard = new javax.swing.JLabel();
+        jLabel3 = new javax.swing.JLabel();
+        card1 = new javax.swing.JLabel();
+        showname = new javax.swing.JLabel();
+        card2 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        showCardBtn = new javax.swing.JButton();
+        jLabel4 = new javax.swing.JLabel();
+        getname = new javax.swing.JTextField();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setBackground(new java.awt.Color(255, 255, 255));
@@ -173,11 +176,35 @@ public class Home extends javax.swing.JFrame {
             }
         });
 
-        jLabel2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        jLabel2.setText("Card Number :");
+        jLabel3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/pngtree-vector-credit-card-icon-png-image_3197601.jpg"))); // NOI18N
 
-        showcard.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
-        showcard.setBorder(javax.swing.BorderFactory.createMatteBorder(0, 0, 1, 0, new java.awt.Color(0, 0, 0)));
+        card1.setFont(new java.awt.Font("Segoe UI", 0, 14)); // NOI18N
+        card1.setForeground(new java.awt.Color(255, 255, 255));
+
+        showname.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showname.setForeground(new java.awt.Color(255, 255, 255));
+
+        card2.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        card2.setForeground(new java.awt.Color(255, 255, 255));
+
+        jLabel5.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/debit-mastercard.png"))); // NOI18N
+
+        showCardBtn.setBackground(new java.awt.Color(0, 100, 100));
+        showCardBtn.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        showCardBtn.setForeground(new java.awt.Color(255, 255, 255));
+        showCardBtn.setText("Show Card");
+        showCardBtn.setBorder(javax.swing.BorderFactory.createBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        showCardBtn.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        showCardBtn.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                showCardBtnActionPerformed(evt);
+            }
+        });
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        jLabel4.setText("Name :");
+
+        getname.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -186,28 +213,58 @@ public class Home extends javax.swing.JFrame {
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addGap(154, 154, 154)
                 .addComponent(jLabel1)
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 129, Short.MAX_VALUE)
+                .addGap(129, 129, 129)
                 .addComponent(jButton1))
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(56, 56, 56)
-                .addComponent(jLabel2)
+                .addGap(30, 30, 30)
+                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(0, 0, 0)
+                .addComponent(getname, javax.swing.GroupLayout.PREFERRED_SIZE, 250, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(30, 30, 30)
+                .addComponent(showCardBtn, javax.swing.GroupLayout.PREFERRED_SIZE, 110, javax.swing.GroupLayout.PREFERRED_SIZE))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(20, 20, 20)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel3)
+                    .addComponent(card1, javax.swing.GroupLayout.PREFERRED_SIZE, 260, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(18, 18, 18)
-                .addComponent(showcard, javax.swing.GroupLayout.PREFERRED_SIZE, 207, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(showname, javax.swing.GroupLayout.PREFERRED_SIZE, 70, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(10, 10, 10)
+                        .addComponent(card2, javax.swing.GroupLayout.PREFERRED_SIZE, 230, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGap(15, 15, 15)
-                .addComponent(jLabel1)
-                .addGap(20, 20, 20)
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(showcard, javax.swing.GroupLayout.PREFERRED_SIZE, 25, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-            .addGroup(jPanel1Layout.createSequentialGroup()
-                .addComponent(jButton1)
-                .addGap(0, 0, Short.MAX_VALUE))
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(15, 15, 15)
+                        .addComponent(jLabel1))
+                    .addComponent(jButton1))
+                .addGap(43, 43, 43)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addComponent(jLabel4)
+                    .addComponent(getname, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(showCardBtn))
+                .addGap(19, 19, 19)
+                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(40, 40, 40)
+                        .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(jLabel3)
+                            .addGroup(jPanel1Layout.createSequentialGroup()
+                                .addGap(40, 40, 40)
+                                .addComponent(card1, javax.swing.GroupLayout.PREFERRED_SIZE, 40, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                    .addGroup(jPanel1Layout.createSequentialGroup()
+                        .addGap(20, 20, 20)
+                        .addComponent(showname, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(120, 120, 120)
+                        .addComponent(card2, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(jLabel5)))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -230,25 +287,6 @@ public class Home extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    public String data(String data) {
-        this.data = data;
-        showcard.setText(data);
-        return data;
-    }
-    /*
-    public void showCard() {
-        try {
-            String cardNumber = data(data);
-            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kuet_bank","root","1234");            
-            String sql = "select username from signup where cardnumber ='"+cardNumber+"'";
-            PreparedStatement pst = con.prepareStatement(sql);
-            ResultSet rs=pst.executeQuery();
-            String s1=rs.getString("username");
-            showcard.setText(s1);         
-        }catch(Exception e) {
-                System.out.println(e);
-            }
-    }*/
     private void homeBtn1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_homeBtn1ActionPerformed
         setVisible(false);
         dispose();
@@ -276,6 +314,30 @@ public class Home extends javax.swing.JFrame {
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
         System.exit(0);
     }//GEN-LAST:event_jButton1ActionPerformed
+
+    private void showCardBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_showCardBtnActionPerformed
+        try{
+            Connection con = DriverManager.getConnection("jdbc:mysql://localhost:3306/kuet_bank","root","1234");
+            String sql = "select username,cardnumber from signup where username = ?";
+            PreparedStatement pst = con.prepareStatement(sql);
+            pst.setString(1,getname.getText());
+            ResultSet rs=pst.executeQuery();
+            if(rs.next()){
+                String add1 = rs.getString("username");
+                showname.setText(add1);
+                String add2 = rs.getString("cardnumber");
+                card1.setText(add2);
+                card2.setText(add2);
+
+                con.close();
+            }
+            else{
+                JOptionPane.showMessageDialog(null,"Please enter correct Name");
+            }
+        }catch(HeadlessException | SQLException e){
+            JOptionPane.showMessageDialog(null,e);
+        }
+    }//GEN-LAST:event_showCardBtnActionPerformed
 
     /**
      * @param args the command line arguments
@@ -313,19 +375,25 @@ public class Home extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel card1;
+    private javax.swing.JLabel card2;
+    private javax.swing.JTextField getname;
     private javax.swing.JButton homeBtn1;
     private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel13;
-    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel8;
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
     private javax.swing.JButton logOutBtn1;
     private javax.swing.JButton profileBtn1;
-    private javax.swing.JLabel showcard;
+    private javax.swing.JButton showCardBtn;
+    private javax.swing.JLabel showname;
     private javax.swing.JButton transferBtn1;
     // End of variables declaration//GEN-END:variables
 }

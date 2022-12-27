@@ -56,6 +56,7 @@ public class CreateAccount extends javax.swing.JFrame {
         terms2 = new javax.swing.JCheckBox();
         jLabel17 = new javax.swing.JLabel();
         Balance = new javax.swing.JTextField();
+        jButton1 = new javax.swing.JButton();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -196,6 +197,16 @@ public class CreateAccount extends javax.swing.JFrame {
 
         Balance.setFont(new java.awt.Font("Segoe UI", 0, 16)); // NOI18N
 
+        jButton1.setBackground(new java.awt.Color(204, 0, 0));
+        jButton1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/assets/close-btn.png"))); // NOI18N
+        jButton1.setBorder(null);
+        jButton1.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
+        jButton1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jButton1ActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout createAccountPanelLayout = new javax.swing.GroupLayout(createAccountPanel);
         createAccountPanel.setLayout(createAccountPanelLayout);
         createAccountPanelLayout.setHorizontalGroup(
@@ -246,24 +257,26 @@ public class CreateAccount extends javax.swing.JFrame {
                                         .addComponent(jLabel16))))
                             .addComponent(terms1)))
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
-                        .addComponent(backBtn)
-                        .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addGroup(createAccountPanelLayout.createSequentialGroup()
-                                .addGap(125, 125, 125)
-                                .addComponent(Married)
-                                .addGap(18, 18, 18)
-                                .addComponent(Unmarried)
-                                .addGap(18, 18, 18)
-                                .addComponent(Others))
-                            .addGroup(createAccountPanelLayout.createSequentialGroup()
-                                .addGap(157, 157, 157)
-                                .addComponent(jLabel1))))
-                    .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addGap(153, 153, 153)
                         .addComponent(clearBtn)
                         .addGap(145, 145, 145)
                         .addComponent(Register)))
                 .addContainerGap(194, Short.MAX_VALUE))
+            .addGroup(createAccountPanelLayout.createSequentialGroup()
+                .addComponent(backBtn)
+                .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(createAccountPanelLayout.createSequentialGroup()
+                        .addGap(125, 125, 125)
+                        .addComponent(Married)
+                        .addGap(18, 18, 18)
+                        .addComponent(Unmarried)
+                        .addGap(18, 18, 18)
+                        .addComponent(Others))
+                    .addGroup(createAccountPanelLayout.createSequentialGroup()
+                        .addGap(157, 157, 157)
+                        .addComponent(jLabel1)
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                        .addComponent(jButton1))))
         );
         createAccountPanelLayout.setVerticalGroup(
             createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -272,7 +285,8 @@ public class CreateAccount extends javax.swing.JFrame {
                     .addComponent(backBtn)
                     .addGroup(createAccountPanelLayout.createSequentialGroup()
                         .addContainerGap()
-                        .addComponent(jLabel1)))
+                        .addComponent(jLabel1))
+                    .addComponent(jButton1))
                 .addGap(44, 44, 44)
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addComponent(Name, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -286,7 +300,7 @@ public class CreateAccount extends javax.swing.JFrame {
                         .addGap(40, 40, 40))
                     .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                         .addComponent(jLabel5)
-                        .addComponent(motherName, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                        .addComponent(motherName, javax.swing.GroupLayout.PREFERRED_SIZE, 36, javax.swing.GroupLayout.PREFERRED_SIZE)))
                 .addGap(8, 8, 8)
                 .addGroup(createAccountPanelLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addComponent(Date, javax.swing.GroupLayout.PREFERRED_SIZE, 30, javax.swing.GroupLayout.PREFERRED_SIZE)
@@ -427,6 +441,10 @@ public class CreateAccount extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_MarriedActionPerformed
 
+    private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
+        System.exit(0);
+    }//GEN-LAST:event_jButton1ActionPerformed
+
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -483,6 +501,7 @@ public class CreateAccount extends javax.swing.JFrame {
     private javax.swing.JButton clearBtn;
     private javax.swing.JPanel createAccountPanel;
     private javax.swing.JTextField fatherName;
+    private javax.swing.JButton jButton1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;

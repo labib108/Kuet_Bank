@@ -4,6 +4,8 @@ import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
+
+    private String data;
     
     public Login() {
         initComponents();
@@ -134,8 +136,9 @@ public class Login extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
+  
     private void signInBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_signInBtnActionPerformed
-        
+
         connection c = new connection();
         String cardnumber = CardNumber.getText();
         String pin = password.getText();
@@ -151,7 +154,6 @@ public class Login extends javax.swing.JFrame {
                 ResultSet rs = c.s.executeQuery(query);
                 if(rs.next()) {
                     Home h = new Home();
-                    h.data(cardnumber);
                     setVisible(false);
                     dispose();
                     h.setVisible(true);

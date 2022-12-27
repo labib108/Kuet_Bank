@@ -1,5 +1,6 @@
 package netbanking;
 
+import java.awt.HeadlessException;
 import java.sql.*;
 import javax.swing.JOptionPane;
 public class Login extends javax.swing.JFrame {
@@ -149,17 +150,18 @@ public class Login extends javax.swing.JFrame {
             try {
                 ResultSet rs = c.s.executeQuery(query);
                 if(rs.next()) {
-                setVisible(false);
-                dispose();
-                new Home().setVisible(true);
+                    Home h = new Home();
+                    h.data(cardnumber);
+                    setVisible(false);
+                    dispose();
+                    h.setVisible(true);
                 }else {
                     JOptionPane.showMessageDialog(null,"Incorrect CARD NUMBER or PIN"); 
                 }          
-            }catch(Exception e) {
+            }catch(HeadlessException | SQLException e) {
                 System.out.println(e);
             }
         }
-        
     }//GEN-LAST:event_signInBtnActionPerformed
 
     private void clearBtnActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearBtnActionPerformed
@@ -192,15 +194,11 @@ public class Login extends javax.swing.JFrame {
                     break;
                 }
             }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+        } catch (ClassNotFoundException | InstantiationException | IllegalAccessException | javax.swing.UnsupportedLookAndFeelException ex) {
             java.util.logging.Logger.getLogger(Login.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
         }
+        //</editor-fold>
+        
         //</editor-fold>
 
         /* Create and display the form */

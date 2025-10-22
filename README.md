@@ -1,4 +1,4 @@
-# Internet Banking System
+# Banking System(Desktop Application -Java)
 
 ## Project Overview
 The **Internet Banking System** is a web-based application designed to provide secure, efficient, and user-friendly online banking services. This system allows users to manage their accounts, transfer funds, pay bills, and access transaction details from anywhere.
